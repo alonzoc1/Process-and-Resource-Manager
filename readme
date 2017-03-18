@@ -1,0 +1,17 @@
+Process/Resource Manager for CS 143B
+
+Input commands:
+-init
+Restore the system to its initial state.
+-cr <name> <priority>
+Invoke function Create(), which creates a new process <name> at the priority level <priority>; <name> is a single character; <priority> can be 1 or 2 (0 is reserved for Init process).
+-de <name>
+Invoke the function Destroy(), which destroy the process <name> and all of its descendants.
+-req <name> <# of units> 
+Invoke the function  Request(), which requests the resource <name>; <name> can be R1, R2, R3, or R4.
+where <# of units> gives the number of units of  resource <name> to be requested. The numbers of units constituting each resource are as follows: 1 for R1, 2 for R2, 3 for R3, and 4 for R4.
+-rel <name> <# of units> 
+Invoke the function  Release(), which release the resource <name>.  
+where <# of units> gives the number of units of  resource <name> to be released.
+-to
+Invoke the function Timeout().
